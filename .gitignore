@@ -1,0 +1,11 @@
+.vscode/
+testseet.jpg
+*.pdf
+*.png
+scn-*.jpg
+__pycache__
+waseda0907
+data.csv
+result.csv
+*.zip
+ngs1108
