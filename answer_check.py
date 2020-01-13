@@ -16,9 +16,9 @@ dataFile = 'data.csv'
 
 
 def scoring(file):
-    i = cv2.imread(file,0)
+    i = cv2.imread(file, 0)
     tokuten = 0
-    tfData=[]
+    tfData = []
     markData = scn_settings.make_data(i)
     entr_number = ''.join(map(str, markData[0]))
     answer_data = markData[1] + markData[2]
@@ -50,16 +50,15 @@ def scoring(file):
             else:
                 tfData.append('f')
     data = [entr_number, tokuten]
-   
-    ## 結果ファイルがなければ生成 あれば追記
-    print(data)
-    with open(dataFile,'a') as f:
-        writer = csv.writer(f,lineterminator='\n')
-        writer.writerow(data)
-        # writer.writerow(tfData)
 
-    with open(resultFile,'a') as f:
-        writer = csv.writer(f,lineterminator='\n')
+    # 結果ファイルがなければ生成 あれば追記
+    print(data)
+    with open(dataFile, 'a') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(data)
+
+    with open(resultFile, 'a') as f:
+        writer = csv.writer(f, lineterminator='\n')
         writer.writerow(answer_data)
 
 
